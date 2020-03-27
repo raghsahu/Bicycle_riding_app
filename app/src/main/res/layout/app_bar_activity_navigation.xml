@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.MainActivity">
+
+
+    <LinearLayout
+        android:background="@color/yellow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:background="@color/yellow">
+
+            <LinearLayout
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:orientation="horizontal"
+                android:layout_centerInParent="true"
+                >
+
+                <ImageView
+                    android:id="@+id/iv_drawer"
+                    android:layout_width="@dimen/_24sdp"
+                    android:layout_height="@dimen/_24sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/menu_icon"
+                    android:visibility="visible" />
+
+
+                <TextView
+                    android:layout_margin="@dimen/_5sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:text="Bikes"
+                    style="@style/text16_bold_light_black"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_notification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_centerInParent="true"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:text="Indore"
+                    style="@style/text_14_light_black"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+                <ImageView
+                    android:layout_width="@dimen/_24sdp"
+                    android:layout_height="@dimen/_24sdp"
+                    app:srcCompat="@drawable/nearby"
+                    android:layout_margin="@dimen/_5sdp"
+                    />
+
+
+                <ImageView
+                    android:layout_width="@dimen/_24sdp"
+                    android:layout_height="@dimen/_24sdp"
+                    app:srcCompat="@drawable/ic_notifications_"
+                    android:layout_margin="@dimen/_5sdp"
+                    />
+
+                <ImageView
+                    android:id="@+id/iv_search"
+                    android:layout_width="@dimen/_24sdp"
+                    android:layout_height="@dimen/_24sdp"
+                    android:src="@drawable/man"
+                    android:layout_margin="@dimen/_5sdp"
+                    />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <include layout="@layout/content_activity_navigation" />
+
+</LinearLayout>

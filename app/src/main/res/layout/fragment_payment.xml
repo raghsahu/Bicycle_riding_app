@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+
+        <variable
+            name="myAdapter"
+            type="dev.raghav.bicycleapp.adapter.PreviousPaymentAdapter"
+            />
+
+    </data>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <androidx.cardview.widget.CardView
+            android:layout_margin="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="@dimen/_4sdp"
+            android:elevation="@dimen/_4sdp"
+            app:cardElevation="@dimen/_4sdp"
+            >
+
+            <LinearLayout
+                android:layout_margin="@dimen/_5sdp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+            <LinearLayout
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <ImageView
+                    android:src="@drawable/wallet"
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_35sdp">
+
+                </ImageView>
+
+                <LinearLayout
+                    android:padding="@dimen/_10sdp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <TextView
+                        android:padding="@dimen/_3sdp"
+                        style="@style/text_16_light_black"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/wallet">
+
+                    </TextView>
+
+                    <TextView
+                        android:padding="@dimen/_3sdp"
+                        style="@style/text_16_light_black"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Rs.130.00">
+
+                    </TextView>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_refund_mode"
+                    android:layout_gravity="right"
+                    android:padding="@dimen/_5sdp"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/refund_mode"
+                    style="@style/text_14_light_black"
+                    android:textStyle="bold"
+                    android:drawableLeft="@drawable/ic_add_black"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:background="@color/yellow"
+                    >
+                </TextView>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <View
+            android:background="@color/light_black"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp">
+
+        </View>
+
+        <TextView
+            android:layout_margin="@dimen/_10sdp"
+            android:padding="@dimen/_5sdp"
+            style="@style/text_16_light_black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/previous">
+        </TextView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:adapter="@{myAdapter}"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            >
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
+
+</layout>

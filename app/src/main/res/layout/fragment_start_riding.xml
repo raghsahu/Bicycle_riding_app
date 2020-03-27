@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/ll_engage"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/text16_bold_light_black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hey Rahul you are riding">
+
+                    </TextView>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:background="@color/light_black">
+
+                </View>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_login"
+                        android:layout_width="@dimen/_50sdp"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:elevation="@dimen/_8sdp"
+                        app:cardBackgroundColor="@color/yellow"
+                        app:cardCornerRadius="@dimen/_25sdp"
+                        app:cardElevation="@dimen/_8sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_24sdp"
+                            android:layout_height="@dimen/_24sdp"
+                            android:layout_gravity="center"
+                            app:srcCompat="@drawable/bike" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/text16_bold_light_black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/_10sdp"
+                            android:text="26 Inch Sporty Runner"></TextView>
+
+                        <TextView
+                            style="@style/text_12_light_black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/_10sdp"
+                            android:text="Submit bike on 28 june 2.00 pm to avoid extra charge."></TextView>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:background="@color/light_black">
+
+                </View>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.4"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="@dimen/_150sdp"
+                            android:layout_height="@dimen/_50sdp"
+                            android:layout_gravity="center"
+                            app:cardCornerRadius="@dimen/_4sdp"
+                            app:cardElevation="@dimen/_4sdp">
+
+                            <TextView
+                                style="@style/text_18_bold_light_black"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:padding="@dimen/_5sdp"
+                                android:text="1299"
+                                android:textAlignment="center">
+
+                            </TextView>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            style="@style/text_14_light_black"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="@string/use_code_unlock"
+                            android:textAlignment="center">
+
+                        </TextView>
+
+                        <LinearLayout
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="@dimen/_70sdp"
+                                android:layout_height="@dimen/_70sdp"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:elevation="@dimen/_8sdp"
+                                app:cardBackgroundColor="@color/yellow"
+                                app:cardCornerRadius="@dimen/_35sdp"
+                                app:cardElevation="@dimen/_8sdp">
+
+
+                                <TextView
+                                    style="@style/text_18_bold_light_black"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:padding="@dimen/_5sdp"
+                                    android:text="72"
+                                    android:textAlignment="center"
+                                    >
+
+                                </TextView>
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                style="@style/text_12_light_black"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:text="@string/submit_bike_before_time"
+                                android:textAlignment="center">
+
+                            </TextView>
+
+
+
+                            <LinearLayout
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:weightSum="1"
+                                >
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/card_renew"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="10dp"
+                                    app:cardCornerRadius="@dimen/_4sdp"
+                                    app:cardElevation="@dimen/_4sdp">
+
+                                <TextView
+                                    style="@style/text_14_light_black"
+                                    android:layout_width="@dimen/_70sdp"
+                                    android:layout_height="wrap_content"
+                                    android:padding="@dimen/_5sdp"
+                                    android:background="@color/yellow"
+                                    android:text="@string/renew"
+                                    android:textAlignment="center">
+
+                                </TextView>
+
+                                </androidx.cardview.widget.CardView>
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="10dp"
+                                    app:cardCornerRadius="@dimen/_4sdp"
+                                    app:cardElevation="@dimen/_4sdp">
+
+                                <TextView
+                                    style="@style/text_14_light_black"
+                                    android:layout_width="@dimen/_70sdp"
+                                    android:layout_height="wrap_content"
+                                    android:padding="@dimen/_5sdp"
+                                    android:background="@color/yellow"
+                                    android:text="@string/end_ride"
+                                    android:textAlignment="center">
+
+                                </TextView>
+
+                                </androidx.cardview.widget.CardView>
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.6"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:weightSum="1">
+
+                        <LinearLayout
+                            android:id="@+id/ll_check_condition"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.5"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="@dimen/_50sdp"
+                                android:layout_height="@dimen/_50sdp"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:elevation="@dimen/_8sdp"
+                                app:cardBackgroundColor="@color/yellow"
+                                app:cardCornerRadius="@dimen/_25sdp"
+                                app:cardElevation="@dimen/_8sdp">
+
+                                <ImageView
+                                    android:layout_width="@dimen/_24sdp"
+                                    android:layout_height="@dimen/_24sdp"
+                                    android:layout_gravity="center"
+                                    app:srcCompat="@drawable/bicycle_icon" />
+
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                style="@style/text_14_light_black"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:padding="5dp"
+                                android:text="@string/check_condition"
+                                android:textAlignment="center">
+
+                            </TextView>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.5"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="@dimen/_50sdp"
+                                android:layout_height="@dimen/_50sdp"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:elevation="@dimen/_8sdp"
+                                app:cardBackgroundColor="@color/yellow"
+                                app:cardCornerRadius="@dimen/_25sdp"
+                                app:cardElevation="@dimen/_8sdp">
+
+                                <ImageView
+                                    android:layout_width="@dimen/_24sdp"
+                                    android:layout_height="@dimen/_24sdp"
+                                    android:layout_gravity="center"
+                                    app:srcCompat="@drawable/map" />
+
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                style="@style/text_14_light_black"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:padding="5dp"
+                                android:text="@string/return_center"
+                                android:textAlignment="center">
+
+                            </TextView>
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    style="@style/text_14_light_black"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:padding="5dp"
+                    android:text="@string/please_park_bike_at_public_safety"
+                    android:textAlignment="center">
+
+                </TextView>
+            </LinearLayout>
+
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/ll_engage"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/yellow"
+            android:gravity="center">
+
+            <TextView
+                style="@style/text_14_light_black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.35"
+                android:padding="5dp"
+                android:text="@string/engage"
+                android:textAlignment="center"
+                android:textStyle="bold">
+
+            </TextView>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>
