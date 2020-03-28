@@ -57,6 +57,17 @@ public class FragmentStartRiding extends Fragment {
             }
         });
 
+        binding.llReturnNavigation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Fragment fragment = new FragmentNavigation();
+                FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
+                ft.replace(R.id.frame, fragment);
+                ft.addToBackStack(null);
+                ft.commit();
+            }
+        });
+
 
         return view;
     }

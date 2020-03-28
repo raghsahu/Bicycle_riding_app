@@ -23,7 +23,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
                     android:gravity="center"
                     android:orientation="vertical">
 
@@ -215,7 +215,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_weight="0.5"
                                     android:paddingRight="5dp"
-                                    android:text="Rs 300"
+                                    android:text="Rs 300.00"
                                     android:textAlignment="textEnd"></TextView>
 
                                 <TextView
@@ -282,7 +282,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_weight="0.5"
                                     android:paddingRight="5dp"
-                                    android:text="Rs 1000"
+                                    android:text="Rs 1000.00"
                                     android:textAlignment="textEnd"></TextView>
 
                                 <TextView
@@ -346,7 +346,7 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="0.5"
                             android:padding="5dp"
-                            android:text="Rs 1000"
+                            android:text="Rs 1000.00"
                             android:textAlignment="textEnd">
 
                         </TextView>
@@ -363,7 +363,7 @@
             android:id="@+id/ll_pay_ride"
             android:layout_alignParentBottom="true"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_40sdp"
+            android:layout_height="@dimen/_50sdp"
             android:gravity="center"
             android:background="@color/yellow"
             >

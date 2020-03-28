@@ -16,7 +16,7 @@ import dev.raghav.bicycleapp.R;
  * Created by Raghvendra Sahu on 23-Mar-20.
  */
 public class OtpEditText extends AppCompatEditText {
-    private float mSpace = 24; //24 dp by default, space between the lines
+    private float mSpace = 20; //24 dp by default, space between the lines
     private float mNumChars = 4;
     private float mLineSpacing = 8; //8dp by default, height of the text from our lines
     private int mMaxLength = 4;

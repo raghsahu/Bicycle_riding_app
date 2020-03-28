@@ -5,10 +5,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 
 import dev.raghav.bicycleapp.R;
+import dev.raghav.bicycleapp.activity.MainActivity;
 import dev.raghav.bicycleapp.databinding.FragmentCheckConditionBinding;
 
 public class FragmentCheck_Condition extends Fragment {
@@ -22,7 +24,11 @@ public class FragmentCheck_Condition extends Fragment {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_check_condition, container, false);
         View view = binding.getRoot();//using data binding
 
+        try {
+            ((MainActivity)getActivity()).Update_header("booking history");
+        }catch (Exception e){
 
+        }
 
 
 

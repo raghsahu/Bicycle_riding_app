@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
 
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -8,19 +8,48 @@
     android:orientation="vertical"
     >
 
-    <TextView
-        android:id="@+id/tv_list_view"
-        android:layout_alignParentRight="true"
-        android:layout_margin="@dimen/_10sdp"
-        android:layout_width="@dimen/_80sdp"
+
+    <LinearLayout
+        android:layout_margin="@dimen/_20sdp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/list"
-        style="@style/textview14white"
-        android:textAlignment="center"
-        android:background="@drawable/rectangle_bg_grey"
+        android:orientation="horizontal"
+        android:layout_alignParentRight="true"
         >
 
+    <TextView
+        android:id="@+id/tv_map_view"
+        android:padding="@dimen/_5sdp"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="wrap_content"
+        android:text="@string/map"
+        style="@style/text_12_light_black"
+        android:textAlignment="center"
+        android:background="@color/grey_color"
+        >
     </TextView>
+
+        <View
+            android:background="@color/light_black"
+            android:layout_width="@dimen/_1sdp"
+            android:layout_height="match_parent">
+
+        </View>
+
+    <TextView
+        android:padding="@dimen/_5sdp"
+        android:id="@+id/tv_list_view"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="wrap_content"
+        android:text="@string/list"
+        style="@style/text_12_light_black"
+        android:textAlignment="center"
+        android:background="@color/grey_color"
+        >
+    </TextView>
+
+    </LinearLayout>
+
 
     <TextView
         android:layout_margin="@dimen/_30sdp"
@@ -33,6 +62,183 @@
         >
 
     </TextView>
+
+    <View
+        android:layout_above="@id/ll_book_now"
+        android:background="@color/light_black"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp">
+
+    </View>
+    
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/_10sdp"
+        android:id="@+id/ll_book_now"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_weight="0.7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_80sdp"
+                android:elevation="@dimen/_4sdp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="@dimen/_40sdp"
+                app:cardElevation="@dimen/_8sdp">
+
+            <ImageView
+                android:layout_gravity="center"
+                android:src="@drawable/bicycle_icon"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_60sdp">
+
+            </ImageView>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="0.3"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+        <TextView
+            style="@style/text_14_light_black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_5sdp"
+            android:text="Mamta bike stores"
+            android:textStyle="bold">
+
+        </TextView>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+
+            <LinearLayout
+                android:layout_weight="0.4"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+
+                <TextView
+                    style="@style/text_12_light_black"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/_5sdp"
+                    android:text="20 km from here"
+                    android:textStyle="normal"></TextView>
+
+                <TextView
+                    style="@style/text_12_light_black"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/_5sdp"
+                    android:text="15 bikes available"
+                    android:textStyle="normal"
+
+                    ></TextView>
+
+                <RatingBar
+                    android:id="@+id/ratingBar"
+                    style="@style/Widget.AppCompat.RatingBar.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:numStars="5"
+                    android:paddingLeft="@dimen/_5sdp"
+                    android:progressTint="@color/orange"
+                    android:rating="4" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/text_12_light_black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/_5sdp"
+                        android:paddingRight="@dimen/_5sdp"
+                        android:text="Open"
+                        android:textStyle="normal"></TextView>
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/clock_grey">
+
+                    </ImageView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_weight="0.6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_login"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:elevation="@dimen/_4sdp"
+                    app:cardBackgroundColor="@color/yellow"
+                    app:cardCornerRadius="@dimen/_25sdp"
+                    app:cardElevation="@dimen/_8sdp">
+
+                   <TextView
+                       style="@style/text_12_light_black"
+                       android:layout_gravity="center"
+                       android:gravity="center"
+                       android:text="@string/ride"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       >
+
+                   </TextView>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
 
 
 

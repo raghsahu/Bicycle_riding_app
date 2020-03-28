@@ -17,6 +17,7 @@ import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -41,6 +42,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     ImageView iv_drawer, nav_img_profile;
     public LinearLayout ll_nav_header;
     Toolbar toolbar;
+    TextView tv_main_header;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +52,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mDrawerLayout = findViewById(R.id.drawer_layout);
         mDrawerList = findViewById(R.id.left_drawer);
         iv_drawer = findViewById(R.id.iv_drawer);
+        tv_main_header = findViewById(R.id.tv_main_header);
 
         View header = getLayoutInflater().inflate(R.layout.nav_header_activity_navigation, null);
         ll_nav_header = header.findViewById(R.id.ll_nav_header);
@@ -271,6 +274,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
 
+    public void Update_header(String title){
+
+        tv_main_header.setText(title);
+
+    }
 
 
 }

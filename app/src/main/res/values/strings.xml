@@ -52,11 +52,11 @@
     <string name="fare">Fare</string>
     <string name="bicycle_helmet_lock_bottle">(Bicycle, helmet, Lock, Water bottle)</string>
     <string name="deposit">Deposit</string>
-    <string name="one_tine_refund">One time until refund</string>
+    <string name="one_tine_refund">(One time until refund)</string>
     <string name="refundable">Refundable</string>
-    <string name="you_pay">You pay</string>
+    <string name="you_pay">You Pay</string>
     <string name="pay_ride"><![CDATA[Pay & Ride]]></string>
-    <string name="you_have_successfully_booked">You have suceessfully booked</string>
+    <string name="you_have_successfully_booked">You have successfully booked</string>
     <string name="please_use_this_code">Please use this code to unlock your bike</string>
     <string name="to_pick_bicycle">To pick bicycle go to center</string>
     <string name="reach_to_location">Reach to location</string>
@@ -64,7 +64,7 @@
     <string name="booking_days">Booking Days</string>
     <string name="amount_paid">Amount paid</string>
     <string name="booking_date">Booking date</string>
-    <string name="start_ride">Start Ride</string>
+    <string name="start_ride"><b>Start</b> Ride</string>
     <string name="go_center_pick_ride"><![CDATA[Go to Center & Pick your ride]]></string>
     <string name="navigation">Navigation</string>
     <string name="engage">Engage</string>
@@ -76,7 +76,7 @@
     <string name="renew">Renew</string>
     <string name="end_ride">End ride</string>
     <string name="done">Done</string>
-    <string name="check_bicycle_condition_properly">Check bicycle condition poperly before start ride</string>
+    <string name="check_bicycle_condition_properly">Check bicycle condition properly before start ride</string>
     <string name="air">Air</string>
     <string name="break_">Break</string>
     <string name="helmet">Helmet</string>
@@ -89,11 +89,11 @@
     <string name="mention">Mention</string>
     <string name="mention_issue">Mention issue</string>
     <string name="submit">Submit</string>
-    <string name="thankyou">Thank you!</string>
+    <string name="thankyou">Thank You !</string>
     <string name="for_riding_with_us">For Riding with us</string>
-    <string name="feedback_valueable">Your feedback is valuable for us</string>
+    <string name="feedback_valueable">Your Feedback is valuable for us</string>
     <string name="comments">Comment:</string>
-    <string name="submit_bith_confirm_code">Submit Your Bike And Confirm Code to Center, To Get Refund.</string>
+    <string name="submit_bith_confirm_code">Submit Your Bike And Confirm \n Code to Center, To Get Refund.</string>
     <string name="enter_here">Enter your text here</string>
     <string name="logout">Logout</string>
     <string name="terms_condition"><![CDATA[Terms & Conditions]]></string>
@@ -114,4 +114,5 @@
     <string name="return_date">Return date</string>
     <string name="previous_text">Previous</string>
     <string name="refund_completed">Refund completed</string>
+    <string name="ride">Ride</string>
 </resources>

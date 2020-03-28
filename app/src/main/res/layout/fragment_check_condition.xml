@@ -29,6 +29,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="@dimen/_10sdp"
+                        android:textAllCaps="true"
                         android:text="@string/check_condition">
 
                     </TextView>
@@ -63,13 +64,13 @@
                             android:layout_weight="0.35"
                             android:padding="5dp"
                             android:text="@string/air"
-                            android:textStyle="bold">
+                            android:textStyle="normal">
 
                         </TextView>
 
                         <LinearLayout
                             android:layout_gravity="center"
-                            android:gravity="center"
+                            android:gravity="right"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="0.65"
@@ -78,8 +79,8 @@
 
                             <ImageView
                                 android:src="@drawable/check_rijght"
-                                android:layout_width="@dimen/_40sdp"
-                                android:layout_height="@dimen/_40sdp"
+                                android:layout_width="@dimen/_35sdp"
+                                android:layout_height="@dimen/_35sdp"
                                 >
 
                             </ImageView>
@@ -104,13 +105,13 @@
                             android:layout_weight="0.35"
                             android:padding="5dp"
                             android:text="@string/break_"
-                            android:textStyle="bold">
+                            android:textStyle="normal">
 
                         </TextView>
 
                         <LinearLayout
                             android:layout_gravity="center"
-                            android:gravity="center"
+                            android:gravity="right"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="0.65"
@@ -119,8 +120,8 @@
 
                             <ImageView
                                 android:src="@drawable/check_rijght"
-                                android:layout_width="@dimen/_40sdp"
-                                android:layout_height="@dimen/_40sdp"
+                                android:layout_width="@dimen/_35sdp"
+                                android:layout_height="@dimen/_35sdp"
                                 >
 
                             </ImageView>
@@ -145,13 +146,13 @@
                             android:layout_weight="0.35"
                             android:padding="5dp"
                             android:text="@string/helmet"
-                            android:textStyle="bold">
+                            android:textStyle="normal">
 
                         </TextView>
 
                         <LinearLayout
                             android:layout_gravity="center"
-                            android:gravity="center"
+                            android:gravity="right"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="0.65"
@@ -160,8 +161,8 @@
 
                             <ImageView
                                 android:src="@drawable/check_rijght"
-                                android:layout_width="@dimen/_40sdp"
-                                android:layout_height="@dimen/_40sdp"
+                                android:layout_width="@dimen/_35sdp"
+                                android:layout_height="@dimen/_35sdp"
                                 >
 
                             </ImageView>
@@ -186,13 +187,13 @@
                             android:layout_weight="0.35"
                             android:padding="5dp"
                             android:text="@string/seating"
-                            android:textStyle="bold">
+                            android:textStyle="normal">
 
                         </TextView>
 
                         <LinearLayout
                             android:layout_gravity="center"
-                            android:gravity="center"
+                            android:gravity="right"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="0.65"
@@ -201,8 +202,8 @@
 
                             <ImageView
                                 android:src="@drawable/check_rijght"
-                                android:layout_width="@dimen/_40sdp"
-                                android:layout_height="@dimen/_40sdp"
+                                android:layout_width="@dimen/_35sdp"
+                                android:layout_height="@dimen/_35sdp"
                                 >
 
                             </ImageView>
@@ -220,7 +221,6 @@
                     android:layout_height="wrap_content"
                     android:padding="@dimen/_10sdp"
                     android:text="@string/check_bicycle_condition_properly">
-
                 </TextView>
 
 
@@ -231,7 +231,7 @@
         <LinearLayout
             android:id="@+id/ll_done"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_40sdp"
+            android:layout_height="@dimen/_50sdp"
             android:layout_alignParentBottom="true"
             android:background="@color/yellow"
             android:gravity="center">

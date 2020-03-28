@@ -1,5 +1,6 @@
 package dev.raghav.bicycleapp.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +11,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import dev.raghav.bicycleapp.R;
+import dev.raghav.bicycleapp.activity.MainActivity;
 import dev.raghav.bicycleapp.databinding.FragmentFeedbackBinding;
 
 public class FragmentFeedback extends Fragment {
@@ -24,14 +26,13 @@ public class FragmentFeedback extends Fragment {
         View view = binding.getRoot();//using data binding
 
 
-        binding.llSubmit.setOnClickListener(new View.OnClickListener() {
+        binding.tvSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Fragment fragment = new FragmentFeedback();
-//                FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
-//                ft.replace(R.id.frame, fragment);
-//                ft.addToBackStack(null);
-//                ft.commit();
+
+                Intent intent=new Intent(getActivity(), MainActivity.class);
+                startActivity(intent);
+                getActivity().finish();
             }
         });
 

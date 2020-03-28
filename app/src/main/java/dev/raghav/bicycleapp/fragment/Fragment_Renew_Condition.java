@@ -11,6 +11,7 @@ import android.widget.LinearLayout;
 
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.viewpager.widget.ViewPager;
 
 import com.ToxicBakery.viewpager.transforms.ZoomOutSlideTransformer;
@@ -40,7 +41,16 @@ public class Fragment_Renew_Condition extends Fragment {
         binding.sliderPager.addOnPageChangeListener(pageChangeListener);
         dotesIndicater();
 
-
+        binding.llPayRide.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Fragment fragment = new FragmentStartRiding();
+                FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
+                ft.replace(R.id.frame, fragment);
+                ft.addToBackStack(null);
+                ft.commit();
+            }
+        });
 
 
 

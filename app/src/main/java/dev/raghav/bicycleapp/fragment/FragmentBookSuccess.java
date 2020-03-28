@@ -55,6 +55,16 @@ public class FragmentBookSuccess extends Fragment {
             }
         });
 
+        binding.llSkipNavigation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Fragment fragment = new FragmentStartRiding();
+                FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
+                ft.replace(R.id.frame, fragment);
+                ft.addToBackStack(null);
+                ft.commit();
+            }
+        });
 
 
         return view;

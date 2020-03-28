@@ -55,6 +55,9 @@ public class BikeStoreListAdapter extends RecyclerView.Adapter<BikeStoreListAdap
             @Override
             public void onClick(View v) {
 
+
+                //OpenBooknowDialog();
+
                 FragmentBookNow fragment2 = new FragmentBookNow();
                 FragmentManager manager = ((AppCompatActivity) context).getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = manager.beginTransaction();

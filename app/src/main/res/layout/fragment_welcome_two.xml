@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="@dimen/_20sdp"
@@ -22,11 +22,13 @@
                 android:layout_height="wrap_content"
                 android:text="@string/how_to_book"
                 android:textAlignment="textStart"
+                android:padding="@dimen/_5sdp"
                 android:textStyle="bold">
 
             </TextView>
 
             <LinearLayout
+                android:padding="@dimen/_5sdp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -43,7 +45,7 @@
                 </ImageView>
 
                 <LinearLayout
-                    android:paddingLeft="@dimen/_5sdp"
+                    android:paddingLeft="@dimen/_10sdp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
@@ -60,6 +62,7 @@
                     </TextView>
 
                     <TextView
+                        android:paddingTop="@dimen/_3sdp"
                         style="@style/text_12_light_black"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -75,6 +78,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:padding="@dimen/_5sdp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -91,7 +95,7 @@
                 </ImageView>
 
                 <LinearLayout
-                    android:paddingLeft="@dimen/_5sdp"
+                    android:paddingLeft="@dimen/_10sdp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
@@ -108,6 +112,7 @@
                     </TextView>
 
                     <TextView
+                        android:paddingTop="@dimen/_3sdp"
                         style="@style/text_12_light_black"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -117,12 +122,10 @@
 
                 </LinearLayout>
 
-
-
-
             </LinearLayout>
 
             <LinearLayout
+                android:padding="@dimen/_5sdp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -139,7 +142,7 @@
                 </ImageView>
 
                 <LinearLayout
-                    android:paddingLeft="@dimen/_5sdp"
+                    android:paddingLeft="@dimen/_10sdp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
@@ -147,15 +150,16 @@
 
                     <TextView
                         style="@style/text_14_light_black"
-                        android:textStyle="bold"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:text="@string/book_a_ride"
                         android:textAlignment="textStart"
-                        android:text="@string/book_a_ride">
+                        android:textStyle="bold">
 
                     </TextView>
 
                     <TextView
+                        android:paddingTop="@dimen/_3sdp"
                         style="@style/text_12_light_black"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -171,6 +175,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:padding="@dimen/_5sdp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -187,7 +192,7 @@
                 </ImageView>
 
                 <LinearLayout
-                    android:paddingLeft="@dimen/_5sdp"
+                    android:paddingLeft="@dimen/_10sdp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
@@ -204,6 +209,7 @@
                     </TextView>
 
                     <TextView
+                        android:paddingTop="@dimen/_3sdp"
                         style="@style/text_12_light_black"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
