@@ -21,7 +21,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/_10sdp"
+                    android:layout_margin="@dimen/_20sdp"
                     android:orientation="vertical">
 
                     <TextView
@@ -34,6 +34,12 @@
 
 
                 </LinearLayout>
+
+                <View
+                    android:background="@color/light_black"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp">
+                </View>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -51,6 +57,15 @@
                     </TextView>
 
 
+                    <TextView
+                        android:textAlignment="textEnd"
+                        style="@style/text_14_light_black"
+                        android:layout_width="match_parent"
+                        android:padding="@dimen/_5sdp"
+                        android:layout_height="wrap_content"
+                        android:text="Continue[...]">
+
+                    </TextView>
 
                 </LinearLayout>
             </LinearLayout>

@@ -9,6 +9,7 @@ import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 
 import dev.raghav.bicycleapp.R;
+import dev.raghav.bicycleapp.activity.MainActivity;
 import dev.raghav.bicycleapp.databinding.FragmentProfileBinding;
 import dev.raghav.bicycleapp.databinding.FragmentRefundmodeBinding;
 
@@ -22,7 +23,11 @@ public class Profile_Fragment extends Fragment {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_profile, container, false);
         View view = binding.getRoot();//using data binding
 
+        try {
+            ((MainActivity) getActivity()).Update_header("Profile");
+        } catch (Exception e) {
 
+        }
 
 
         return view;

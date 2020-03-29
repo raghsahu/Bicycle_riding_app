@@ -192,7 +192,26 @@
                             android:gravity="center"
                             android:orientation="vertical">
 
+
+
+                            <RelativeLayout
+                                android:layout_width="@dimen/_140sdp"
+                                android:layout_height="@dimen/_140sdp"
+                                >
+
+                                <ImageView
+                                    android:layout_centerVertical="true"
+                                    android:layout_alignParentLeft="true"
+                                    app:srcCompat="@drawable/rotate_arrow"
+                                    android:rotation="50"
+                                    android:layout_width="@dimen/_40sdp"
+                                    android:layout_height="@dimen/_80sdp"
+                                    >
+
+                                </ImageView>
+
                             <androidx.cardview.widget.CardView
+                                android:layout_centerInParent="true"
                                 android:layout_width="@dimen/_80sdp"
                                 android:layout_height="@dimen/_80sdp"
                                 android:layout_marginTop="@dimen/_5sdp"
@@ -201,21 +220,37 @@
                                 app:cardCornerRadius="@dimen/_40sdp"
                                 app:cardElevation="@dimen/_4sdp">
 
+                                    <TextView
+                                        android:textStyle="bold"
+                                        android:textSize="@dimen/_24sdp"
+                                        android:textColor="@color/white"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:padding="@dimen/_5sdp"
+                                        android:text="72"
+                                        android:gravity="center"
+                                        android:textAlignment="center"
+                                        >
+                                    </TextView>
 
-                                <TextView
-                                    android:textStyle="bold"
-                                    android:textSize="@dimen/_24sdp"
-                                    android:textColor="@color/white"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center"
-                                    android:padding="@dimen/_5sdp"
-                                    android:text="72"
-                                    android:textAlignment="center"
+
+
+                            </androidx.cardview.widget.CardView>
+
+
+                                <ImageView
+                                    android:layout_centerVertical="true"
+                                    android:layout_alignParentRight="true"
+                                    app:srcCompat="@drawable/rotate_arrow"
+                                    android:rotation="230"
+                                    android:layout_width="@dimen/_40sdp"
+                                    android:layout_height="@dimen/_80sdp"
                                     >
 
-                                </TextView>
-                            </androidx.cardview.widget.CardView>
+                                </ImageView>
+
+                            </RelativeLayout>
 
                             <TextView
                                 style="@style/text_12_light_black"
@@ -385,7 +420,7 @@
                 </LinearLayout>
 
                 <TextView
-                    style="@style/text_14_light_black"
+                    style="@style/text_12_light_black"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="@dimen/_2sdp"

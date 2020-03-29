@@ -11,6 +11,9 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
+
 import java.util.ArrayList;
 
 import dev.raghav.bicycleapp.R;
@@ -65,11 +68,25 @@ public class LeftDrawerAdapter extends BaseAdapter {
         TextView itemtxt = view.findViewById(R.id.list_item_id);
         icon_profile = view.findViewById(R.id.icon_profile);
         LinearLayout linearLayout = view.findViewById(R.id.layout_id);
+        View view_line = view.findViewById(R.id.view_line);
+
+
+        if (index==7 ){
+            view_line.setVisibility(View.VISIBLE);
+        } if (index==11 ){
+            view_line.setVisibility(View.VISIBLE);
+        }
+
 
 
         //set name and icon on listview
         itemtxt.setText(drawerItem.getItemName());
         icon_profile.setImageResource((int) drawerItem.getIconImg());
+
+//        Glide.with(mContext)
+//                .load(drawerItem.getIconImg())
+//                .diskCacheStrategy(DiskCacheStrategy.ALL)
+//                .into(icon_profile);
 
         //Selected Item  Highlighted
         if (selectedIndex != -1 && index == selectedIndex) {
@@ -79,7 +96,6 @@ public class LeftDrawerAdapter extends BaseAdapter {
 
             linearLayout.setBackgroundResource(R.drawable.listselection_bg);
             itemtxt.setTextColor(Color.parseColor("#FFFFFF"));
-
             //TextStyle Bold
             itemtxt.setTypeface(Typeface.DEFAULT_BOLD);
 

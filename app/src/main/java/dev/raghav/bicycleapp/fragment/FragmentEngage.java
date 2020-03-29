@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import dev.raghav.bicycleapp.R;
+import dev.raghav.bicycleapp.activity.MainActivity;
 import dev.raghav.bicycleapp.databinding.FragmentEngageBinding;
 
 public class FragmentEngage extends Fragment {
@@ -23,7 +24,11 @@ public class FragmentEngage extends Fragment {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_engage, container, false);
         View view = binding.getRoot();//using data binding
 
+        try {
+            ((MainActivity) getActivity()).Update_header("bikes");
+        } catch (Exception e) {
 
+        }
         binding.cardSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

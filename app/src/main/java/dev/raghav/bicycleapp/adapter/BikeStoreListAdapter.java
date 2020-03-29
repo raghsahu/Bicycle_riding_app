@@ -1,11 +1,19 @@
 package dev.raghav.bicycleapp.adapter;
 
+import android.app.Dialog;
 import android.content.Context;
+import android.graphics.drawable.InsetDrawable;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -24,6 +32,7 @@ public class BikeStoreListAdapter extends RecyclerView.Adapter<BikeStoreListAdap
 
     private List<ListBikeStoreItem> dataModelList;
     Context context;
+    private Dialog successDialog;
    // SessionManager sessionManager;
 
 
@@ -55,18 +64,52 @@ public class BikeStoreListAdapter extends RecyclerView.Adapter<BikeStoreListAdap
             @Override
             public void onClick(View v) {
 
+                OpenBooknowDialog();
 
-                //OpenBooknowDialog();
+            }
+        });
 
+
+    }
+
+    private void OpenBooknowDialog() {
+        successDialog = new Dialog(context,R.style.DialogTheme);
+        successDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        successDialog.setCancelable(true);
+        successDialog.setContentView(R.layout.booknow_dialog);
+        //dialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
+       //////// successDialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
+        WindowManager.LayoutParams lp = new WindowManager.LayoutParams();
+        lp.copyFrom(successDialog.getWindow().getAttributes());
+        lp.width = WindowManager.LayoutParams.MATCH_PARENT;
+        lp.height = WindowManager.LayoutParams.WRAP_CONTENT;
+        lp.gravity = Gravity.BOTTOM;
+        successDialog.getWindow().setAttributes(lp);
+
+        CardView card_booknow = successDialog.findViewById(R.id.card_booknow);
+
+        card_booknow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
                 FragmentBookNow fragment2 = new FragmentBookNow();
                 FragmentManager manager = ((AppCompatActivity) context).getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = manager.beginTransaction();
                 fragmentTransaction.replace(R.id.frame, fragment2);
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
+
+                successDialog.dismiss();
             }
         });
 
+
+        try {
+            if (!((AppCompatActivity)context).isFinishing()) {
+                successDialog.show();
+            }
+        } catch (WindowManager.BadTokenException e) {
+            //use a log message
+        }
 
     }
 

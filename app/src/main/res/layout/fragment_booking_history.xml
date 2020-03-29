@@ -20,11 +20,11 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/_10sdp"
+                    android:layout_margin="@dimen/_20sdp"
                     android:orientation="horizontal">
 
                     <TextView
-                        style="@style/text16_bold_light_black"
+                        style="@style/text_18_bold_light_black"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/recent">
@@ -75,6 +75,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:paddingLeft="@dimen/_10sdp"
+                            android:textAllCaps="true"
                             android:text="Road, mountain Bicycle">
 
                         </TextView>
@@ -84,7 +85,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:paddingLeft="@dimen/_10sdp"
-                            android:text="From 26 jun 2020 to 28 june 2020 2.00 pm at Mamta bicycle, indore"></TextView>
+                            android:text="From 26 Jun 2020 to 28 June 2020 2.00 PM at Mamta Bicycle, Indore"></TextView>
 
                     </LinearLayout>
 
@@ -130,7 +131,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:paddingLeft="5dp"
-                                android:text="Rs 300"></TextView>
+                                android:text="₹ 300.00"></TextView>
                         </LinearLayout>
 
                         <LinearLayout
@@ -146,14 +147,18 @@
                                 android:layout_height="wrap_content"
                                 android:paddingLeft="5dp"
                                 android:text="@string/deposit"
-                                android:textStyle="bold"></TextView>
+                                android:textStyle="bold">
+
+                            </TextView>
 
                             <TextView
                                 style="@style/text_12_light_black"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:paddingLeft="5dp"
-                                android:text="Rs 100"></TextView>
+                                android:text="₹ 100.00">
+
+                            </TextView>
                         </LinearLayout>
 
                     </LinearLayout>
@@ -162,6 +167,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.5"
+                        android:layout_marginRight="@dimen/_10sdp"
                         android:orientation="vertical">
 
 
@@ -171,7 +177,7 @@
                             android:layout_height="wrap_content"
                             android:paddingLeft="5dp"
                             android:text="@string/return_date"
-                            android:textAlignment="center"
+                            android:textAlignment="textEnd"
                             android:textStyle="bold">
 
                         </TextView>
@@ -182,7 +188,7 @@
                             android:layout_height="wrap_content"
                             android:paddingLeft="5dp"
                             android:text="21/jun/2020"
-                            android:textAlignment="center">
+                            android:textAlignment="textEnd">
 
                         </TextView>
 
@@ -192,7 +198,7 @@
                             android:layout_height="wrap_content"
                             android:paddingLeft="5dp"
                             android:text="2.00 pm"
-                            android:textAlignment="center">
+                            android:textAlignment="textEnd">
 
                         </TextView>
 
@@ -213,12 +219,14 @@
                     >
 
                     <TextView
+                        android:id="@+id/tv_navigation"
                         android:padding="@dimen/_10sdp"
                         android:layout_weight="0.5"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textAlignment="center"
                         style="@style/text_14_light_black"
+                        android:textStyle="bold"
                         android:background="@color/yellow"
                         android:text="@string/navigation"
                         >
@@ -234,12 +242,14 @@
 
 
                     <TextView
+                        android:id="@+id/tv_check_condition"
                         android:layout_weight="0.5"
                         android:padding="@dimen/_10sdp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textAlignment="center"
                         style="@style/text_14_light_black"
+                        android:textStyle="bold"
                         android:background="@color/yellow"
                         android:text="@string/check_condition"
                         >
@@ -251,11 +261,11 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/_10sdp"
+                    android:layout_margin="@dimen/_20sdp"
                     android:orientation="horizontal">
 
                     <TextView
-                        style="@style/text16_bold_light_black"
+                        style="@style/text_18_bold_light_black"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/previous_text">
@@ -343,35 +353,59 @@
                             android:text="@string/total_amount_paid"
                             android:textStyle="bold"></TextView>
 
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:weightSum="1"
+                            >
+
                         <TextView
+                            android:layout_weight="0.6"
                             style="@style/text_12_light_black"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:paddingLeft="5dp"
-                            android:text="Rs 300"></TextView>
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:layout_weight="0.5"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        >
-
-                        <TextView
-                            style="@style/text16_bold_light_black"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:paddingLeft="@dimen/_10sdp"
-                            android:text="@string/refund_completed">
+                            android:text="₹ 300.00">
 
                         </TextView>
 
+                            <LinearLayout
+                                android:layout_weight="0.4"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                >
+
+                                <TextView
+                                    android:layout_marginRight="@dimen/_10sdp"
+                                    android:textAlignment="textEnd"
+                                    style="@style/text_16_light_black"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/refund_completed">
+
+                                </TextView>
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
 
                     </LinearLayout>
 
+
                 </LinearLayout>
+
+                <View
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:background="@color/light_black">
+
+                </View>
 
 
             </LinearLayout>

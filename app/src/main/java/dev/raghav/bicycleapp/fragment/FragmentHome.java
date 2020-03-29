@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import dev.raghav.bicycleapp.R;
+import dev.raghav.bicycleapp.activity.MainActivity;
 import dev.raghav.bicycleapp.databinding.FragmentHomeBinding;
 
 public class FragmentHome extends Fragment {
@@ -21,7 +22,11 @@ public class FragmentHome extends Fragment {
        // View view = inflater.inflate(R.layout.fragment_home, null);
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_home, container, false);
         View view = binding.getRoot();//using data binding
+        try {
+            ((MainActivity) getActivity()).Update_header("bikes");
+        } catch (Exception e) {
 
+        }
         binding.tvListView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

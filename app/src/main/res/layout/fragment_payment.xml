@@ -66,6 +66,7 @@
                         style="@style/text_16_light_black"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:textAllCaps="true"
                         android:text="@string/wallet">
 
                     </TextView>
@@ -89,6 +90,7 @@
                     android:layout_gravity="right"
                     android:padding="@dimen/_5sdp"
                     android:gravity="center"
+                    android:textAllCaps="true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/refund_mode"
@@ -104,13 +106,6 @@
         </androidx.cardview.widget.CardView>
 
 
-        <View
-            android:background="@color/light_black"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_1sdp">
-
-        </View>
-
         <TextView
             android:layout_margin="@dimen/_10sdp"
             android:padding="@dimen/_5sdp"
@@ -119,6 +114,14 @@
             android:layout_height="wrap_content"
             android:text="@string/previous">
         </TextView>
+
+
+        <View
+            android:background="@color/light_black"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp">
+
+        </View>
 
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"

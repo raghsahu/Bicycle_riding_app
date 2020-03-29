@@ -115,4 +115,10 @@
     <string name="previous_text">Previous</string>
     <string name="refund_completed">Refund completed</string>
     <string name="ride">Ride</string>
+    <string name="rupee_sign">₹</string>
+
+    <string-array name="today_tomorrow">
+        <item>Today</item>
+        <item>Tomorrow</item>
+    </string-array>
 </resources>

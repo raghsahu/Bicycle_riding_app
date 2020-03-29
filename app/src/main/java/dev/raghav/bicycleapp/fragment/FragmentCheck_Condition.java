@@ -25,7 +25,7 @@ public class FragmentCheck_Condition extends Fragment {
         View view = binding.getRoot();//using data binding
 
         try {
-            ((MainActivity)getActivity()).Update_header("booking history");
+            ((MainActivity)getActivity()).Update_header("Booking History");
         }catch (Exception e){
 
         }

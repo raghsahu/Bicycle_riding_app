@@ -14,4 +14,14 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+    <style name="DialogTheme" parent="android:style/Theme.Dialog">
+        <!-- Customize your theme here. -->
+        <item name="android:windowBackground">@null</item>
+<!--        <item name="android:windowNoTitle">true</item>-->
+<!--        <item name="android:windowIsFloating">false</item>-->
+        <item name="android:padding">0dp</item>
+
+        <!-- Just to prove it's working -->
+        <item name="android:background">#ffffff</item>
+    </style>
 </resources>

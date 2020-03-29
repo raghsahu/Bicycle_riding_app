@@ -40,12 +40,15 @@
 
 
                 <TextView
+                    android:layout_gravity="center"
+                    android:gravity="center"
                     android:id="@+id/tv_main_header"
                     android:layout_margin="@dimen/_5sdp"
                     android:layout_centerVertical="true"
                     android:layout_width="wrap_content"
                     android:text="bikes"
                     style="@style/text16_bold_light_black"
+                    android:textStyle="bold"
                     android:layout_height="wrap_content">
 
                 </TextView>
@@ -68,7 +71,7 @@
                     android:layout_centerVertical="true"
                     android:layout_width="wrap_content"
                     android:text="Indore"
-                    style="@style/text_14_light_black"
+                    style="@style/text_12_light_black"
                     android:layout_height="wrap_content">
 
                 </TextView>

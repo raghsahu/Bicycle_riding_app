@@ -17,7 +17,7 @@
 
 
     <LinearLayout
-        android:layout_margin="@dimen/_10sdp"
+        android:layout_margin="@dimen/_5sdp"
         android:layout_gravity="center"
         android:gravity="center"
         android:layout_width="match_parent"
@@ -63,7 +63,7 @@
                 style="@style/text_12_light_black"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="21/jun/2020  10.59 am">
+                android:text="21/jun/2020    10.59 am">
 
             </TextView>
 
@@ -78,7 +78,7 @@
                 style="@style/text_16_light_black"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Rs 130">
+                android:text="Rs 130.00">
 
             </TextView>
         </LinearLayout>
@@ -86,13 +86,6 @@
 
     </LinearLayout>
 
-    <View
-        android:background="@color/light_black"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_1sdp"
-        >
-
-    </View>
 
 </LinearLayout>
 

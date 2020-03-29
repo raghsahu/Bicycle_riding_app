@@ -18,6 +18,7 @@ import androidx.viewpager.widget.ViewPager;
 import com.ToxicBakery.viewpager.transforms.ZoomOutSlideTransformer;
 
 import dev.raghav.bicycleapp.R;
+import dev.raghav.bicycleapp.activity.MainActivity;
 import dev.raghav.bicycleapp.adapter.SliderAdapter;
 import dev.raghav.bicycleapp.databinding.FragmentBookSuccessBinding;
 
@@ -33,7 +34,11 @@ public class FragmentBookSuccess extends Fragment {
         // View view = inflater.inflate(R.layout.fragment_home, null);
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_book_success, container, false);
         View view = binding.getRoot();//using data binding
+        try {
+            ((MainActivity) getActivity()).Update_header("bikes");
+        } catch (Exception e) {
 
+        }
 
         //set slider
         sliderAdapter = new SliderAdapter(getActivity());

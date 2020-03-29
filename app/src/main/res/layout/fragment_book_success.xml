@@ -56,12 +56,39 @@
                     android:gravity="center"
                     android:orientation="vertical">
 
-                    <androidx.viewpager.widget.ViewPager
-                        android:id="@+id/slider_pager"
+                    <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="150dp"
-                        android:layout_gravity="center"
-                        android:visibility="visible" />
+                        android:layout_height="wrap_content"
+                        >
+
+                        <ImageView
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="@dimen/_20sdp"
+                            app:srcCompat="@drawable/ic_keyboard_arrow_left_"
+                            android:layout_width="@dimen/_24sdp"
+                            android:layout_height="@dimen/_24sdp">
+
+                        </ImageView>
+
+                        <androidx.viewpager.widget.ViewPager
+                            android:id="@+id/slider_pager"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:layout_gravity="center"
+                            android:visibility="visible" />
+
+                        <ImageView
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/_20sdp"
+                            app:srcCompat="@drawable/ic_arrow_right_grey"
+                            android:layout_width="@dimen/_24sdp"
+                            android:layout_height="@dimen/_24sdp">
+
+                        </ImageView>
+
+                    </RelativeLayout>
 
                     <LinearLayout
                         android:id="@+id/linear_layout"
@@ -162,7 +189,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="0.5"
                                 android:padding="5dp"
-                                android:text="Rs 300.00"
+                                android:text="₹ 300.00"
                                 android:textAlignment="textEnd">
 
                             </TextView>
@@ -200,7 +227,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="0.5"
                                 android:padding="5dp"
-                                android:text="Rs 1000.00"
+                                android:text="₹ 1000.00"
                                 android:textAlignment="textEnd">
 
                             </TextView>

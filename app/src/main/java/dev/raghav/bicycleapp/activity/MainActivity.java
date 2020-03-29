@@ -17,6 +17,7 @@ import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -40,7 +41,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     DrawerItem drawerItem;
     DrawerLayout mDrawerLayout;
     ImageView iv_drawer, nav_img_profile;
-    public LinearLayout ll_nav_header;
+    public RelativeLayout ll_nav_header;
     Toolbar toolbar;
     TextView tv_main_header;
 
@@ -59,7 +60,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         nav_img_profile = header.findViewById(R.id.nav_img_profile);
         // nav_tv_name = header.findViewById(R.id.nav_tv_name);
 
+        View footer = getLayoutInflater().inflate(R.layout.drawer_footer_view_logout, null);
+
         mDrawerList.addHeaderView(header);
+        mDrawerList.addFooterView(footer);
         // nav_tv_name.setText(SharedPreference.getName(MainActivity.this));
         clickListner();
         DrawerItem();
@@ -102,10 +106,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //Selected Value Highlighted
         leftDrawerAdapter.setSelectedIndex(pos);
         //Get List Item
-        drawerItem = List_Item.get(pos);
-        Log.e("Position......", String.valueOf(pos));
-        String Item_Name = drawerItem.getItemName();
-        Log.e("Position......", Item_Name);
+        String Item_Name="";
+        if (pos!=14){
+            drawerItem = List_Item.get(pos);
+            Log.e("Position......", String.valueOf(pos));
+            Item_Name = drawerItem.getItemName();
+            Log.e("Position......", Item_Name);
+
+        }
+
         //-********************************
 
         //Call Fragment on a listview click listner
@@ -152,16 +161,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             mDrawerLayout.closeDrawer(mDrawerList);
 
         }else if (Item_Name.equals("Privacy policy")) {
-            Fragment  fragment2 = new TermsCondition_Fragment();
-//            tv_title.setText("");
-            Bundle bundle = new Bundle();
-            // bundle.putString("Title", "");
-            FragmentTransaction ft =getSupportFragmentManager().beginTransaction();
-            ft.replace(R.id.frame, fragment2);
-            ft.addToBackStack(null);
-            ft.commit();
-            fragment2.setArguments(bundle);
-            mDrawerLayout.closeDrawer(mDrawerList);
+
 
         }else if (Item_Name.equals("Booking history")) {
             Fragment  fragment2 = new Booking_History_Fragment();
@@ -217,7 +217,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         List_Item.add(new DrawerItem(R.drawable.privacy_icon, getResources().getString(R.string.privacy_policy)));
         List_Item.add(new DrawerItem(R.drawable.terms_notbook, getResources().getString(R.string.terms_of_use)));
         List_Item.add(new DrawerItem(R.drawable.about_us, getResources().getString(R.string.about_us)));
-        List_Item.add(new DrawerItem(R.drawable.ic_info_logout, getResources().getString(R.string.logout)));
+       // List_Item.add(new DrawerItem(R.drawable.ic_info_logout, getResources().getString(R.string.logout)));
 
 
     }

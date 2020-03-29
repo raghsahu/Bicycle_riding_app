@@ -1,36 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/ll_nav_header"
     android:layout_width="match_parent"
     android:layout_height="@dimen/nav_header_height"
-    android:background="@color/dark_blue_color"
+    android:background="@color/white"
     android:orientation="vertical"
     android:gravity="center"
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
 
     <ImageView
-        android:layout_margin="@dimen/_5sdp"
+        android:layout_margin="@dimen/_10sdp"
+        android:id="@+id/nav_menu_line"
+        android:layout_width="@dimen/_24sdp"
+        android:layout_height="@dimen/_24sdp"
+        android:layout_gravity="left"
+        android:scaleType="fitXY"
+        android:src="@drawable/menu_icon"
+
+        />
+
+    <ImageView
+        android:layout_margin="@dimen/_10sdp"
+        android:layout_centerHorizontal="true"
         android:id="@+id/nav_img_profile"
-        android:layout_width="@dimen/_70sdp"
-        android:layout_height="@dimen/_70sdp"
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="@dimen/_60sdp"
         android:layout_gravity="center"
         android:scaleType="fitXY"
-        android:src="@drawable/bicycle_icon"
+        android:src="@drawable/man"
 
         />
 
     <TextView
+        android:layout_below="@+id/nav_img_profile"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAlignment="center"
         android:padding="@dimen/_5sdp"
-        style="@style/textview14white"
+        style="@style/text14_bold_big_black"
         android:text="Rrrrr "
         >
 
     </TextView>
 
+    <View
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:background="@color/light_black"
+        >
 
-</LinearLayout>
+    </View>
+
+
+</RelativeLayout>

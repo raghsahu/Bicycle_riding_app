@@ -59,7 +59,7 @@
         </LinearLayout>
 
         <TextView
-            android:layout_marginLeft="@dimen/_10sdp"
+            android:padding="@dimen/_5sdp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/bikes_center_near_you"

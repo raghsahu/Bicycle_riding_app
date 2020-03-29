@@ -13,6 +13,7 @@
             android:scrollbars="none">
 
             <LinearLayout
+                android:layout_marginTop="@dimen/_20sdp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
@@ -25,7 +26,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        style="@style/text14_bold_big_black"
+                        style="@style/text_14_light_black"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Complete your profile">
@@ -33,7 +34,7 @@
                     </TextView>
 
                     <TextView
-                        style="@style/text_14_light_black"
+                        style="@style/text_12_light_black"
                         android:layout_width="match_parent"
                         android:padding="@dimen/_5sdp"
                         android:layout_height="wrap_content"
@@ -41,12 +42,21 @@
 
                     </TextView>
 
+                    <TextView
+                        android:layout_gravity="right"
+                        style="@style/text_14_light_black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Collapse [...]">
+
+                    </TextView>
+
                 </LinearLayout>
 
                 <View
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/_1sdp"
-                    android:background="@color/light_black"
+                    android:layout_height="1dp"
+                    android:background="@color/grey_color"
                     >
                 </View>
 
@@ -58,15 +68,15 @@
                     android:orientation="vertical">
 
                     <TextView
-                        style="@style/text14_bold_big_black"
+                        style="@style/text_14_light_black"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="complete your profile">
+                        android:text="Complete your profile">
 
                     </TextView>
 
                     <TextView
-                        style="@style/text_14_light_black"
+                        style="@style/text_12_light_black"
                         android:layout_width="match_parent"
                         android:padding="@dimen/_5sdp"
                         android:layout_height="wrap_content"
@@ -74,44 +84,24 @@
 
                     </TextView>
 
+                    <TextView
+                        android:layout_gravity="right"
+                        style="@style/text_14_light_black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Collapse [...]">
+
+                    </TextView>
+
                 </LinearLayout>
 
                 <View
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/_1sdp"
-                    android:background="@color/light_black"
-                    >
-                </View>   <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/_10sdp"
-                android:orientation="vertical">
-
-                <TextView
-                    style="@style/text14_bold_big_black"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="complete your profile">
-
-                </TextView>
-
-                <TextView
-                    style="@style/text_14_light_black"
-                    android:layout_width="match_parent"
-                    android:padding="@dimen/_5sdp"
-                    android:layout_height="wrap_content"
-                    android:text="Hi, hello  aaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaaa">
-
-                </TextView>
-
-            </LinearLayout>
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/_1sdp"
-                    android:background="@color/light_black"
+                    android:layout_height="1dp"
+                    android:background="@color/grey_color"
                     >
                 </View>
+
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -120,15 +110,15 @@
                     android:orientation="vertical">
 
                     <TextView
-                        style="@style/text14_bold_big_black"
+                        style="@style/text_14_light_black"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="complete your profile">
+                        android:text="Complete your profile">
 
                     </TextView>
 
                     <TextView
-                        style="@style/text_14_light_black"
+                        style="@style/text_12_light_black"
                         android:layout_width="match_parent"
                         android:padding="@dimen/_5sdp"
                         android:layout_height="wrap_content"
@@ -136,12 +126,21 @@
 
                     </TextView>
 
+                    <TextView
+                        android:layout_gravity="right"
+                        style="@style/text_14_light_black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Collapse [...]">
+
+                    </TextView>
+
                 </LinearLayout>
 
                 <View
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/_1sdp"
-                    android:background="@color/light_black"
+                    android:layout_height="1dp"
+                    android:background="@color/grey_color"
                     >
                 </View>
 

@@ -1,13 +1,17 @@
 package dev.raghav.bicycleapp.fragment;
 
 import android.annotation.SuppressLint;
+import android.app.DatePickerDialog;
+import android.app.TimePickerDialog;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.DatePicker;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TimePicker;
 
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
@@ -16,7 +20,14 @@ import androidx.viewpager.widget.ViewPager;
 
 import com.ToxicBakery.viewpager.transforms.ZoomOutSlideTransformer;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Locale;
+
 import dev.raghav.bicycleapp.R;
+import dev.raghav.bicycleapp.activity.MainActivity;
 import dev.raghav.bicycleapp.adapter.SliderAdapter;
 import dev.raghav.bicycleapp.databinding.FragmentRenewConditionBinding;
 
@@ -32,7 +43,11 @@ public class Fragment_Renew_Condition extends Fragment {
         // View view = inflater.inflate(R.layout.fragment_home, null);
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_renew_condition, container, false);
         View view = binding.getRoot();//using data binding
+        try {
+            ((MainActivity) getActivity()).Update_header("bikes");
+        } catch (Exception e) {
 
+        }
         //set slider
         sliderAdapter = new SliderAdapter(getActivity());
         binding.sliderPager.setAdapter(sliderAdapter);
@@ -52,10 +67,88 @@ public class Fragment_Renew_Condition extends Fragment {
             }
         });
 
+        binding.tvDate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
+                OpenDateCalendar();
+
+            }
+        });
+
+        binding.tvSettime.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SelectTime();
+
+            }
+        });
 
 
         return view;
+    }
+
+
+    private void SelectTime() {
+        TimePickerDialog mTimePicker;
+
+        final Calendar c = Calendar.getInstance();
+        int hour = c.get(Calendar.HOUR_OF_DAY);
+        int minute = c.get(Calendar.MINUTE);
+
+        mTimePicker = new TimePickerDialog(getActivity(), new TimePickerDialog.OnTimeSetListener() {
+            @Override
+            public void onTimeSet(TimePicker timePicker, int selectedHour, int selectedMinute) {
+
+                String time = selectedHour + ":" + selectedMinute;
+
+                SimpleDateFormat fmt = new SimpleDateFormat("HH:mm");
+                Date date = null;
+                try {
+                    date = fmt.parse(time );
+                } catch (ParseException e) {
+
+                    e.printStackTrace();
+                }
+
+                SimpleDateFormat fmtOut = new SimpleDateFormat("hh:mm aa");
+
+                String formattedTime=fmtOut.format(date);
+
+                    binding.tvSettime.setText(formattedTime);
+
+
+            }
+        }, hour, minute, false);//No 24 hour time
+        mTimePicker.setTitle("Select Time");
+        mTimePicker.show();
+
+    }
+
+    private void OpenDateCalendar() {
+        Calendar mcurrentDate = Calendar.getInstance();
+        final int[] mYear = {mcurrentDate.get(Calendar.YEAR)};
+        final int[] mMonth = {mcurrentDate.get(Calendar.MONTH)};
+        final int[] mDay = {mcurrentDate.get(Calendar.DAY_OF_MONTH)};
+        DatePickerDialog mDatePicker = new DatePickerDialog(getActivity(), new DatePickerDialog.OnDateSetListener() {
+            public void onDateSet(DatePicker datepicker, int selectedyear, int selectedmonth, int selectedday) {
+                Calendar myCalendar = Calendar.getInstance();
+                myCalendar.set(Calendar.YEAR, selectedyear);
+                myCalendar.set(Calendar.MONTH, selectedmonth);
+                myCalendar.set(Calendar.DAY_OF_MONTH, selectedday);
+                String myFormat = "yyyy/MM/dd"; //Change as you need
+                SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.FRANCE);
+                binding.tvDate.setText(sdf.format(myCalendar.getTime()));
+
+                mDay[0] = selectedday;
+                mMonth[0] = selectedmonth;
+                mYear[0] = selectedyear;
+            }
+        }, mYear[0], mMonth[0], mDay[0]);
+        //mDatePicker.setTitle("Select date");
+        mDatePicker.show();
+        mDatePicker.getDatePicker().setMinDate(System.currentTimeMillis() - 1000);
+
     }
 
     ViewPager.OnPageChangeListener pageChangeListener = new ViewPager.OnPageChangeListener() {

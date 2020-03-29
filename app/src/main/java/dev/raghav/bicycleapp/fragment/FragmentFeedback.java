@@ -24,7 +24,11 @@ public class FragmentFeedback extends Fragment {
         // View view = inflater.inflate(R.layout.fragment_home, null);
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_feedback, container, false);
         View view = binding.getRoot();//using data binding
+        try {
+            ((MainActivity) getActivity()).Update_header("bikes");
+        } catch (Exception e) {
 
+        }
 
         binding.tvSubmit.setOnClickListener(new View.OnClickListener() {
             @Override

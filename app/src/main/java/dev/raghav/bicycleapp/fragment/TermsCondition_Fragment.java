@@ -9,6 +9,7 @@ import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 
 import dev.raghav.bicycleapp.R;
+import dev.raghav.bicycleapp.activity.MainActivity;
 import dev.raghav.bicycleapp.databinding.FragmentTermsConditionBinding;
 
 public class TermsCondition_Fragment extends Fragment {
@@ -21,7 +22,11 @@ public class TermsCondition_Fragment extends Fragment {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_terms_condition, container, false);
         View view = binding.getRoot();//using data binding
 
+        try {
+            ((MainActivity) getActivity()).Update_header("bikes");
+        } catch (Exception e) {
 
+        }
 
         return view;
     }

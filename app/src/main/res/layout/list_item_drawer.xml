@@ -25,6 +25,7 @@
         <TextView
             android:id="@+id/list_item_id"
             style="@style/text_12_light_black"
+            android:textAllCaps="true"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_24sdp"
             android:layout_alignParentLeft="true"
@@ -37,6 +38,15 @@
 
 
     </RelativeLayout>
+
+    <View
+        android:visibility="gone"
+        android:id="@+id/view_line"
+        android:background="@color/light_black"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp">
+
+    </View>
 
 
 

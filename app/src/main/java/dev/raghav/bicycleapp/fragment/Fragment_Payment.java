@@ -12,6 +12,7 @@ import androidx.fragment.app.FragmentTransaction;
 import java.util.ArrayList;
 
 import dev.raghav.bicycleapp.R;
+import dev.raghav.bicycleapp.activity.MainActivity;
 import dev.raghav.bicycleapp.adapter.BikeStoreListAdapter;
 import dev.raghav.bicycleapp.adapter.PreviousPaymentAdapter;
 import dev.raghav.bicycleapp.databinding.FragmentPaymentBinding;
@@ -20,14 +21,17 @@ import dev.raghav.bicycleapp.model_pojo.ListBikeStoreItem;
 public class Fragment_Payment extends Fragment {
     FragmentPaymentBinding binding;
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // View view = inflater.inflate(R.layout.fragment_home, null);
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_payment, container, false);
         View view = binding.getRoot();//using data binding
+        try {
+            ((MainActivity)getActivity()).Update_header("Payment");
+        }catch (Exception e){
 
+        }
 
         //call_api
         getPreviousPaymentList();

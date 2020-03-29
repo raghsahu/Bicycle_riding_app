@@ -12,6 +12,7 @@ import androidx.fragment.app.FragmentTransaction;
 import java.util.ArrayList;
 
 import dev.raghav.bicycleapp.R;
+import dev.raghav.bicycleapp.activity.MainActivity;
 import dev.raghav.bicycleapp.adapter.BikeStoreListAdapter;
 import dev.raghav.bicycleapp.databinding.FragmentHomeBinding;
 import dev.raghav.bicycleapp.databinding.FragmentListviewBinding;
@@ -27,6 +28,11 @@ public class FragmentListView extends Fragment {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_listview, container, false);
         View view = binding.getRoot();//using data binding
 
+        try {
+            ((MainActivity) getActivity()).Update_header("bikes");
+        } catch (Exception e) {
+
+        }
         binding.tvMapView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
